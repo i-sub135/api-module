@@ -16,6 +16,11 @@ Moduleing Api project
     - make autostart        [for run hot reload note : install reflex module]
 
 
-# PACKAGE OTHER
 
-[reflex](https://github.com/cespare/reflex)
+# OTHER PACKAGE 
+
+- [reflex](https://github.com/cespare/reflex)
+- [gin gonic](https://github.com/gin-gonic/gin)
+- [jwt go](https://github.com/dgrijalva/jwt-go)
+- [gorm](https://github.com/jinzhu/gorm)
+- [.env](https://github.com/joho/godotenv)
