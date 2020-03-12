@@ -11,10 +11,10 @@ Moduleing Api project
     - git clone https://github.com/iyan-subdiana135/api-module.git
     - open in terminal
     - go mod download       [install package requirement]
-    - run make init         [initial project]
+    - make init             [initial project]
     - make run              [run project]
     - make build            [build project]
-    - make autostart        [run hot reload note : install reflex module]
+    - make autostart        [run hot reload. note : reflex module is required]
 
 
 
