@@ -19,7 +19,7 @@ Moduleing Api project
 
 # OTHER PACKAGE 
 
-- [reflex](https://github.com/cespare/reflex)       \t For Hot Reload Runner
+- [reflex](https://github.com/cespare/reflex)       For Hot Reload Runner
 - [gin gonic](https://github.com/gin-gonic/gin)     HTTP web framework written in Go
 - [jwt go](https://github.com/dgrijalva/jwt-go)     Golang implementation of JSON Web Tokens (JWT)
 - [gorm](https://github.com/jinzhu/gorm)            ORM library for Golang
