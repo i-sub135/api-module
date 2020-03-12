@@ -19,8 +19,8 @@ Moduleing Api project
 
 # OTHER PACKAGE 
 
-- [reflex](https://github.com/cespare/reflex)
-- [gin gonic](https://github.com/gin-gonic/gin)
-- [jwt go](https://github.com/dgrijalva/jwt-go)
-- [gorm](https://github.com/jinzhu/gorm)
-- [.env](https://github.com/joho/godotenv)
+- [reflex](https://github.com/cespare/reflex)       For Hot Reload Runner
+- [gin gonic](https://github.com/gin-gonic/gin)     HTTP web framework written in Go
+- [jwt go](https://github.com/dgrijalva/jwt-go)     Golang implementation of JSON Web Tokens (JWT)
+- [gorm](https://github.com/jinzhu/gorm)            ORM library for Golang
+- [.env](https://github.com/joho/godotenv)          Loads environment variables from `.env`
