@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"api-module/httpd/middleware"
 	"api-module/httpd/model"
 	"api-module/httpd/response"
 	"net/http"
@@ -27,4 +28,14 @@ func GetBookingUserCtrl(res *gin.Context) {
 	data := model.GetBookUser(id)
 
 	res.JSON(http.StatusOK, response.RespOK(data))
+}
+
+// CreateJwtCtrl -- test jwt created
+func CreateJwtCtrl(res *gin.Context) {
+	jwt, err := middleware.CreateJwt(12, "subdiana@gmail.com")
+	if err != nil {
+		res.JSON(http.StatusBadRequest, response.RespBad(301, "Creating Jwt Error"))
+	} else {
+		res.JSON(http.StatusOK, response.RespOK(jwt))
+	}
 }

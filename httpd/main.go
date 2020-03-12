@@ -24,6 +24,7 @@ func main() {
 	route.GET("/ping", Ctrl.IndexCtrl)
 	route.GET("/book", Ctrl.GetBookingCtrl)
 	route.GET("/book/:id", Ctrl.GetBookingUserCtrl)
+	route.GET("/jwt", Ctrl.CreateJwtCtrl)
 
 	route.Run()
 }

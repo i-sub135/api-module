@@ -16,5 +16,5 @@ else
 	@echo "masukan URL .env Anda \nContoh : \n - make run url=http://bla/bla/bla.env\n\n" && reflex -r '\.go' -s -- sh -c 'go run httpd/main.go'
 endif
 
-# init:
-# 	rm -f glide.yaml && glide init
+init:
+	go get -v  -d ./...
