@@ -2,7 +2,6 @@ package model
 
 import (
 	"api-module/httpd/db"
-	"os"
 
 	"github.com/getsentry/sentry-go"
 )
@@ -45,16 +44,6 @@ type (
 )
 
 var sql = db.Conenect()
-
-func init() {
-	SenDNS := os.Getenv("SENTRY_DNS")
-	err := sentry.Init(sentry.ClientOptions{
-		Dsn: SenDNS,
-	})
-	if err != nil {
-		panic(err)
-	}
-}
 
 // GetBooking --  query get booking
 func GetBooking() []TBooking {
