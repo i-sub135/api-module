@@ -5,9 +5,21 @@ import (
 	"api-module/httpd/model"
 	"api-module/httpd/response"
 	"net/http"
+	"os"
 
+	"github.com/getsentry/sentry-go"
 	"github.com/gin-gonic/gin"
 )
+
+func init() {
+	SenDNS := os.Getenv("SENTRY_DNS")
+	err := sentry.Init(sentry.ClientOptions{
+		Dsn: SenDNS,
+	})
+	if err != nil {
+		panic(err)
+	}
+}
 
 // IndexCtrl -- response index
 func IndexCtrl(res *gin.Context) {

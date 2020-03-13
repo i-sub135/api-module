@@ -2,6 +2,9 @@ package model
 
 import (
 	"api-module/httpd/db"
+	"os"
+
+	"github.com/getsentry/sentry-go"
 )
 
 type (
@@ -43,16 +46,34 @@ type (
 
 var sql = db.Conenect()
 
+func init() {
+	SenDNS := os.Getenv("SENTRY_DNS")
+	err := sentry.Init(sentry.ClientOptions{
+		Dsn: SenDNS,
+	})
+	if err != nil {
+		panic(err)
+	}
+}
+
 // GetBooking --  query get booking
 func GetBooking() []TBooking {
 	data := []TBooking{}
-	sql.Table("t_booking").Find(&data)
+	err := sql.Table("t_booking").Find(&data).Error
+	if err != nil {
+		sentry.CaptureException(err)
+		return nil
+	}
 	return data
 }
 
 // GetBookUser -- get booking by user
 func GetBookUser(id string) []TBooking {
 	data := []TBooking{}
-	sql.Table("t_booking").Where("user_id=?", id).Find(&data)
+	err := sql.Table("t_booking").Where("user_id=?", id).Find(&data).Error
+	if err != nil {
+		sentry.CaptureException(err)
+		return nil
+	}
 	return data
 }
