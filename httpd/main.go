@@ -2,6 +2,7 @@ package main
 
 import (
 	Ctrl "api-module/httpd/controller"
+	"api-module/httpd/middleware"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -21,6 +22,10 @@ func main() {
 	gin.SetMode(mode)
 
 	route := gin.Default()
+
+	// include middleware
+	route.Use(middleware.ValidREQ, middleware.ErrorHandle())
+
 	route.GET("/ping", Ctrl.IndexCtrl)
 	route.GET("/book", Ctrl.GetBookingCtrl)
 	route.GET("/book/:id", Ctrl.GetBookingUserCtrl)

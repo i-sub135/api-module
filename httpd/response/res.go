@@ -32,3 +32,14 @@ func RespBad(errCode uint, errMsg string) interface{} {
 
 	return out
 }
+
+// RespNotFound -- response 404
+func RespNotFound(errCode uint, errMsg string) interface{} {
+	out := output{
+		Code:      http.StatusNotFound,
+		Message:   "Not Found",
+		ErrorCode: errCode,
+		ErrorMsg:  errMsg,
+	}
+	return out
+}

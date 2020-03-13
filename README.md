@@ -5,6 +5,7 @@ Moduleing Api project
 # REQUIREMENTS
 
 - OS base terminal BASH (debian, ubuntu, etc)
+- [curl](https://curl.haxx.se/docs/manpage.html)
 
 # INSTALATION
 
