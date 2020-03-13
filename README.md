@@ -6,6 +6,7 @@ Moduleing Api project
 
 - OS base terminal BASH (debian, ubuntu, etc)
 - [curl](https://curl.haxx.se/docs/manpage.html)
+- [makefile](https://en.wikipedia.org/wiki/Makefile)
 
 # INSTALATION
 
